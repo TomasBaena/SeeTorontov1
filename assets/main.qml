@@ -4,8 +4,7 @@ NavigationPane {
     Menu.definition: MenuDefinition {//swipe down menu
         helpAction: HelpActionItem {//help option
             onTriggered: {
-                var contentpage = helpDefinition.createObject();
-                nav.push(contentpage);
+                nav.push(helpPage);
             }
         }
     }
@@ -25,48 +24,47 @@ NavigationPane {
                     id: searchButton
                     text: qsTr("Search") + Retranslate.onLocaleOrLanguageChanged
                     onClicked: {
-                        var contentpage = searchDefinition.createObject();
-                        nav.push(contentpage);
+                        nav.push(searchPage);
                     }
                 } 
                 Button {
                     id: categoryButton
                     text: qsTr("Categories") + Retranslate.onLocaleOrLanguageChanged
                     onClicked: {
-                        var contentpage = categoryDefinition.createObject();
-                        nav.push(contentpage);
+                        nav.push(categoryPage);
                     }
                 }
                 Button {
                     id: findButton
                     text: qsTr("Find Something to do") + Retranslate.onLocaleOrLanguageChanged
                     onClicked: {
-                        var contentpage = findDefinition.createObject();
-                        nav.push(contentpage);
+                       nav.push(findPage);
                     }
                 }       
             }
         }
     }
-    attachedObjects: [
-        ComponentDefinition {
-            id: searchDefinition
-            source: "Search.qml"
+    
+    attachedObjects: [      
+        CaptureInfo{
+            id: captureInfoPage
         },
-        ComponentDefinition {
-            id: categoryDefinition
-            source: "Category.qml"
+        Locations {
+            id: locationsPage
         },
-        ComponentDefinition {
-            id: findDefinition
-            source: "Find.qml"
+        Search {
+            id: searchPage
         },
-        ComponentDefinition {
-            id: helpDefinition
-            source: "Help.qml"
+        Category {
+            id: categoryPage
+        },
+       Find {
+            id: findPage
+        },
+        Help {
+            id: helpPage
         }
     ]
-    onPopTransitionEnded: {
-        page.destroy();
-    }
+    
+
 }

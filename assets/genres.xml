@@ -1,6 +1,6 @@
 <root>
     <header title="Categories">
-     	<item name="Attractions" path="asset:///images/park_icon.png" info="dfsihdjbslsdsdfbdsv"/>	
+     	<item name="Attractions" path="asset:///images/park_icon.png"/>	
     	<item  name="Beaches"/>     	
      	<item  name="Cinemas"/>
      	<item  name="Convention/Trade"/>

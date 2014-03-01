@@ -1,6 +1,9 @@
 1
-9
-attractionLocations.xml
+12
+AllLocations.xml
+AttractionsLocations.xml
+BeachesLocations.xml
+CaptureInfo.qml
 Category.qml
 Find.qml
 genres.xml
