@@ -1,6 +1,5 @@
 1
 12
-AllLocations.xml
 AttractionsLocations.xml
 BeachesLocations.xml
 CaptureInfo.qml
@@ -9,6 +8,7 @@ Find.qml
 genres.xml
 Help.qml
 images/park_icon.png
+LocationInfo.qml
 Locations.qml
 main.qml
 Search.qml

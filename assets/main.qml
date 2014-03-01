@@ -63,6 +63,9 @@ NavigationPane {
         },
         Help {
             id: helpPage
+        },        
+        LocationInfo {
+            id: locationInfoPage
         }
     ]
     
