@@ -1,0 +1,18 @@
+<root>
+    <header title="Categories">
+     	<item name="Attractions" path="asset:///images/park_icon.png" info="dfsihdjbslsdsdfbdsv"/>	
+    	<item  name="Beaches"/>     	
+     	<item  name="Cinemas"/>
+     	<item  name="Convention/Trade"/>
+     	<item  name="Parks"/>
+     	<item  name="Galleries"/>
+     	<item  name="Gardens"/>
+     	<item  name="Museums"/>
+     	<item  name="Preforming Arts"/>
+     	<item  name="Police HQ"/>
+     	<item  name="Shopping"/>
+     	<item  name="Sports/Entertainment"/>
+     	<item  name="Transportation"/>
+     	<item  name="Visitor Info"/>
+    </header>
+</root>
