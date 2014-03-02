@@ -4,12 +4,15 @@
 #include <QTranslator>
 #include "applicationui.hpp"
 
+#include <bb/platform/LocationMapInvoker>
+
 #include <Qt/qdeclarativedebug.h>
 
 using namespace bb::cascades;
 
 Q_DECL_EXPORT int main(int argc, char **argv)
 {
+	qmlRegisterType<bb::platform::LocationMapInvoker>("bb.platform", 1, 0, "LocationMapInvoker");
     Application app(argc, argv);
 
     // Create the Application UI object, this is where the main.qml file

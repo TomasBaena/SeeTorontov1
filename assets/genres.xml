@@ -1,18 +1,16 @@
 <root>
-    <header title="Categories">
-     	<item name="Attractions" path="asset:///images/park_icon.png"/>	
-    	<item  name="Beaches"/>     	
-     	<item  name="Cinemas"/>
-     	<item  name="Convention/Trade"/>
-     	<item  name="Parks"/>
-     	<item  name="Galleries"/>
-     	<item  name="Gardens"/>
-     	<item  name="Museums"/>
-     	<item  name="Preforming Arts"/>
-     	<item  name="Police HQ"/>
-     	<item  name="Shopping"/>
-     	<item  name="Sports/Entertainment"/>
-     	<item  name="Transportation"/>
-     	<item  name="Visitor Info"/>
-    </header>
+     	<item name="Attractions" path="asset:///images/attraction.png"/>	
+    	<item  name="Beaches" path="asset:///images/beach.png"/>     	
+     	<item  name="Cinemas" path="asset:///images/cinema.png"/>
+     	<item  name="Convention/Trade" path="asset:///images/trade.png"/>
+     	<item  name="Parks" path="asset:///images/park.png"/>
+     	<item  name="Galleries" path="asset:///images/gallery.png"/>
+     	<item  name="Gardens" path="asset:///images/garden.png"/>
+     	<item  name="Museums" path="asset:///images/museum.png"/>
+     	<item  name="Performing Arts" path="asset:///images/performing_art.png"/>
+     	<item  name="Police HQ" path="asset:///images/toronto-police.png"/>
+     	<item  name="Shopping" path="asset:///images/shopping.png"/>
+     	<item  name="Sports/Entertainment" path="asset:///images/entertainment.png"/>
+     	<item  name="Transportation" path="asset:///images/transportation.png"/>
+     	<item  name="Visitor Info" path="asset:///images/visitor_information.png"/>
 </root>

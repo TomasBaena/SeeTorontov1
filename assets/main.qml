@@ -10,18 +10,14 @@ NavigationPane {
     }
     Page {
         Container {layout: DockLayout {}
-        
-            Label {
-                
-                verticalAlignment: VerticalAlignment.Top
-                horizontalAlignment: HorizontalAlignment.Center
-                text: "Yolo zwag app"
-            }
+            background: backgroundPaint.imagePaint
             Container {layout: StackLayout {orientation: LayoutOrientation.TopToBottom}
                 verticalAlignment: VerticalAlignment.Center
-                horizontalAlignment: HorizontalAlignment.Center
+                horizontalAlignment: HorizontalAlignment.Left
+                leftPadding: 50
                 Button {
                     id: searchButton
+                    preferredHeight: maxHeight
                     text: qsTr("Search") + Retranslate.onLocaleOrLanguageChanged
                     onClicked: {
                         nav.push(searchPage);
@@ -29,6 +25,7 @@ NavigationPane {
                 } 
                 Button {
                     id: categoryButton
+                    preferredHeight: maxHeight
                     text: qsTr("Categories") + Retranslate.onLocaleOrLanguageChanged
                     onClicked: {
                         nav.push(categoryPage);
@@ -36,16 +33,22 @@ NavigationPane {
                 }
                 Button {
                     id: findButton
+                    preferredHeight: maxHeight
                     text: qsTr("Find Something to do") + Retranslate.onLocaleOrLanguageChanged
                     onClicked: {
-                       nav.push(findPage);
+                        nav.push(findPage);
                     }
                 }       
             }
         }
     }
     
-    attachedObjects: [      
+    attachedObjects: [  
+        
+        ImagePaintDefinition {
+            id: backgroundPaint		
+            imageSource: "asset:///images/mainBg.png"
+        },    
         CaptureInfo{
             id: captureInfoPage
         },
@@ -58,7 +61,7 @@ NavigationPane {
         Category {
             id: categoryPage
         },
-       Find {
+        Find {
             id: findPage
         },
         Help {
@@ -68,6 +71,5 @@ NavigationPane {
             id: locationInfoPage
         }
     ]
-    
 
 }
