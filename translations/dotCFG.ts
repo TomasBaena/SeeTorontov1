@@ -4,32 +4,32 @@
 <context>
     <name>LocationInfo</name>
     <message>
-        <location filename="../assets/LocationInfo.qml" line="38"/>
+        <location filename="../assets/LocationInfo.qml" line="41"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/LocationInfo.qml" line="56"/>
+        <location filename="../assets/LocationInfo.qml" line="63"/>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/LocationInfo.qml" line="82"/>
+        <location filename="../assets/LocationInfo.qml" line="93"/>
         <source>Additional Address Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/LocationInfo.qml" line="100"/>
+        <location filename="../assets/LocationInfo.qml" line="111"/>
         <source>Phone Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/LocationInfo.qml" line="118"/>
+        <location filename="../assets/LocationInfo.qml" line="132"/>
         <source>Email</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/LocationInfo.qml" line="136"/>
+        <location filename="../assets/LocationInfo.qml" line="150"/>
         <source>Website</source>
         <translation type="unfinished"></translation>
     </message>
@@ -37,17 +37,17 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="21"/>
+        <location filename="../assets/main.qml" line="22"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="29"/>
+        <location filename="../assets/main.qml" line="31"/>
         <source>Categories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="37"/>
+        <location filename="../assets/main.qml" line="40"/>
         <source>Find Something to do</source>
         <translation type="unfinished"></translation>
     </message>

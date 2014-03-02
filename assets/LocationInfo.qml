@@ -8,11 +8,11 @@ Page {
     property alias locationPhone: locationPhone
     property alias locationEmail: locationEmail
     property alias locationWebSite: locationWebSite
-    property alias locationIndex: locationIndex
     property alias locationDescription: locationDescription
     Container {layout: DockLayout {}
-        background: backgroundPaint.imagePaint
-
+        //background: backgroundPaint.imagePaint
+        background: Color.create ("#46453f")
+        
         Container {
             Label {
                 horizontalAlignment: HorizontalAlignment.Center
@@ -31,69 +31,80 @@ Page {
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Top
                 Container {layout: StackLayout {orientation: LayoutOrientation.TopToBottom}
-                    Divider {}
-                    Label {
-                        horizontalAlignment: HorizontalAlignment.Center
-                        multiline: true
-                        text: qsTr("Description") + Retranslate.onLocaleOrLanguageChanged
-                        textStyle {
-                            base: headerStyle.style
+                    Container {
+                        preferredWidth: maxWidth
+                        bottomPadding: 15
+                        background: Color.create ("#A391B7")
+                        Label {
+                            horizontalAlignment: HorizontalAlignment.Center
+                            multiline: true
+                            text: qsTr("Description") + Retranslate.onLocaleOrLanguageChanged
+                            textStyle {
+                                base: headerStyle.style
+                            }
+                        }
+                        Label {
+                            id: locationDescription
+                            horizontalAlignment: HorizontalAlignment.Center
+                            multiline: true
+                            text: ""
+                            textStyle {
+                                base: bodyStyle.style
+                                textAlign: textAlign.Center
+                            }
                         }
                     }
-                    Label {
-                        id: locationDescription
+                    Container {
                         horizontalAlignment: HorizontalAlignment.Center
-                        multiline: true
-                        text: ""
-                        textStyle {
-                            base: bodyStyle.style
+                        bottomPadding: 15
+                        Label {
+                            horizontalAlignment: HorizontalAlignment.Center
+                            multiline: true
+                            text: qsTr("Address") + Retranslate.onLocaleOrLanguageChanged
+                            textStyle {
+                                base: headerStyle.style
+                            }
+                        }
+                        Label {
+                            id: locationAddress
+                            horizontalAlignment: HorizontalAlignment.Center
+                            multiline: true
+                            text: ""
+                            textStyle {
+                                base: bodyStyle.style
+                            }
+                        }
+                        Button {
+                            text: "Map It"
+                            horizontalAlignment: HorizontalAlignment.Center
+                            onClicked: {
+                                locationInvokerID.searchText=locationAddress.text+" Toronto"+" Ontario"
+                                locationInvokerID.go();
+                            }
                         }
                     }
-                    Divider {}
-                    Label {
-                        horizontalAlignment: HorizontalAlignment.Center
-                        multiline: true
-                        text: qsTr("Address") + Retranslate.onLocaleOrLanguageChanged
-                        textStyle {
-                            base: headerStyle.style
+                    Container {
+                        preferredWidth: maxWidth
+                        bottomPadding: 15
+                        background: Color.create ("#A391B7")
+                        Label {
+                            horizontalAlignment: HorizontalAlignment.Center
+                            multiline: true
+                            text: qsTr("Additional Address Info") + Retranslate.onLocaleOrLanguageChanged
+                            textStyle {
+                                base: headerStyle.style
+                            }
+                        }
+                        Label {
+                            id: locationAdditional_address
+                            horizontalAlignment: HorizontalAlignment.Center
+                            multiline: true
+                            text: ""
+                            textStyle {
+                                base: bodyStyle.style
+                            }
                         }
                     }
-                    Label {
-                        id: locationAddress
-                        horizontalAlignment: HorizontalAlignment.Center
-                        multiline: true
-                        text: ""
-                        textStyle {
-                            base: bodyStyle.style
-                        }
-                    }
-                    Button {
-                        text: "Map It"
-                        horizontalAlignment: HorizontalAlignment.Center
-                        onClicked: {
-                            locationInvokerID.searchText=locationAddress.text+" Toronto"+" Ontario"
-                            locationInvokerID.go();
-                        }
-                    }
-                    Divider {}
-                    Label {
-                        horizontalAlignment: HorizontalAlignment.Center
-                        multiline: true
-                        text: qsTr("Additional Address Info") + Retranslate.onLocaleOrLanguageChanged
-                        textStyle {
-                            base: headerStyle.style
-                        }
-                    }
-                    Label {
-                        id: locationAdditional_address
-                        horizontalAlignment: HorizontalAlignment.Center
-                        multiline: true
-                        text: ""
-                        textStyle {
-                            base: bodyStyle.style
-                        }
-                    }
-                    Divider {}
                     Label {
                         horizontalAlignment: HorizontalAlignment.Center
                         multiline: true
@@ -111,7 +122,10 @@ Page {
                             base: bodyStyle.style
                         }
                     }
-                    Divider {}
+                    Container {
+                        preferredWidth: maxWidth
+                        bottomPadding: 15
+                        background: Color.create ("#A391B7")
                     Label {
                         horizontalAlignment: HorizontalAlignment.Center
                         multiline: true
@@ -129,7 +143,7 @@ Page {
                             base: bodyStyle.style
                         }
                     }
-                    Divider {}
+                }
                     Label {
                         horizontalAlignment: HorizontalAlignment.Center
                         multiline: true
@@ -140,15 +154,6 @@ Page {
                     }
                     Label {
                         id: locationWebSite
-                        horizontalAlignment: HorizontalAlignment.Center
-                        multiline: true
-                        text: ""
-                        textStyle {
-                            base: bodyStyle.style
-                        }
-                    }
-                    Label {
-                        id: locationIndex
                         horizontalAlignment: HorizontalAlignment.Center
                         multiline: true
                         text: ""
@@ -195,7 +200,8 @@ Page {
                 base: SystemDefaults.TextStyles.BodyText            
                 fontWeight: FontWeight.Bold
                 fontSize: FontSize.XLarge
-                color: Color.Black
+                color: Color.White
+                fontFamily: "Sans serif"
             },
             TextStyleDefinition
             {
@@ -203,8 +209,9 @@ Page {
                 base: SystemDefaults.TextStyles.BodyText            
                 fontWeight: FontWeight.Normal
                 fontSize: FontSize.Medium
-                color: Color.Black
-                
+                color: Color.White
+                fontFamily: "Helvetica"
+            
             },
             ImagePaintDefinition {
                 id: backgroundPaint		
